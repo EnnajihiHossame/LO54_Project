@@ -1,19 +1,21 @@
 package core.Entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by ennajihihoussame on 28/05/2017.
  */
 @Entity
 @Table(name = "CLIENT", schema = "LO54_database", catalog = "")
-public class ClientEntity {
+public class ClientEntity implements Serializable, IEntity {
     private int idClient;
     private String lastname;
     private String firstname;
     private String address;
     private String phone;
     private String email;
+    private int idCourseSession;
 
     @Id
     @Column(name = "ID_CLIENT", nullable = false)
@@ -101,5 +103,29 @@ public class ClientEntity {
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "ID_COURSE_SESSION", nullable = false)
+    public int getIdCourseSession() {
+        return idCourseSession;
+    }
+
+    public void setIdCourseSession(int idCourseSession) {
+        this.idCourseSession = idCourseSession;
+    }
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Client{");
+        builder.append("id=").append(idClient);
+        builder.append(", lastName=").append(lastname);
+        builder.append(", firstName=").append(firstname);
+        builder.append(", address=").append(address);
+        builder.append(", phone=").append(phone);
+        builder.append(", email=").append(email);
+        builder.append(", courseSession=").append(idCourseSession);
+        builder.append("}");
+        return builder.toString();
     }
 }

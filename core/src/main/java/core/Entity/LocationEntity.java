@@ -1,13 +1,14 @@
 package core.Entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by ennajihihoussame on 28/05/2017.
  */
 @Entity
 @Table(name = "LOCATION", schema = "LO54_database", catalog = "")
-public class LocationEntity {
+public class LocationEntity implements Serializable, IEntity{
     private int idLocation;
     private String city;
 
@@ -49,5 +50,14 @@ public class LocationEntity {
         int result = idLocation;
         result = 31 * result + (city != null ? city.hashCode() : 0);
         return result;
+    }
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Location{");
+        builder.append("id=").append(idLocation);
+        builder.append(", city=").append(city);
+        builder.append("}");
+        return builder.toString();
     }
 }

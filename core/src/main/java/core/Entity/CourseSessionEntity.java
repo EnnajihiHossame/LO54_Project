@@ -1,6 +1,7 @@
 package core.Entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
@@ -8,10 +9,12 @@ import java.sql.Timestamp;
  */
 @Entity
 @Table(name = "COURSE_SESSION", schema = "LO54_database", catalog = "")
-public class CourseSessionEntity {
+public class CourseSessionEntity implements Serializable, IEntity{
     private int idCourseSession;
     private Timestamp startDate;
     private Timestamp endDate;
+    private String codeCourse;
+    private int idLocation;
 
     @Id
     @Column(name = "ID_COURSE_SESSION", nullable = false)
@@ -63,5 +66,37 @@ public class CourseSessionEntity {
         result = 31 * result + (startDate != null ? startDate.hashCode() : 0);
         result = 31 * result + (endDate != null ? endDate.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "CODE_COURSE", nullable = false, length = 45)
+    public String getCodeCourse() {
+        return codeCourse;
+    }
+
+    public void setCodeCourse(String codeCourse) {
+        this.codeCourse = codeCourse;
+    }
+
+    @Basic
+    @Column(name = "ID_LOCATION", nullable = false)
+    public int getIdLocation() {
+        return idLocation;
+    }
+
+    public void setIdLocation(int idLocation) {
+        this.idLocation = idLocation;
+    }
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("CourseSession{");
+        builder.append("id=").append(idCourseSession);
+        builder.append(", startDate=").append(startDate);
+        builder.append(", endDate=").append(endDate);
+        builder.append(", course=").append(codeCourse);
+        builder.append(", location=").append(idLocation);
+        builder.append("}");
+        return builder.toString();
     }
 }
