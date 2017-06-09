@@ -6,6 +6,20 @@
         <element id="directory" name="classes">
           <element id="module-output" name="webapp" />
         </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="com.utbm.lo54-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="core" />
+          </element>
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.1.6.Final" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.0.GA" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.0.Final" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.1.Final" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.35" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/webapp/target/com.utbm.lo54/META-INF/MANIFEST.MF" />
