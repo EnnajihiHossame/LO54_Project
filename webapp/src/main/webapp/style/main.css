@@ -1,0 +1,12 @@
+table_container {
+    width: 70%;
+
+}
+#blue{
+    background: #2aabd2;
+}
+.center {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+}
