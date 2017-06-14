@@ -15,7 +15,7 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        ClientEntity l1 = new ClientEntity();
+        /*ClientEntity l1 = new ClientEntity();
         l1.setIdClient(8);
         l1.setFirstname("Samah");
         l1.setLastname("Rim");
@@ -29,7 +29,12 @@ public class App
         /*CourseEntity c = new CourseEntity();
         CourseDao cd = new CourseDao();
         System.out.println(cd.getEntities().toString());*/
+        ClientEntity cl = new ClientEntity("Salhy", "Said", "Crous Belfort", "+33 3 38 37 43", "Said.salhy@gmail.com", 1);
+        ClientDao clientDao = new ClientDao();
+        clientDao.insertEntity(cl);
 
+        System.out.print(cl.toString());
+        System.out.print(clientDao.getEntity(cl.getIdClient()).toString());
 
     }
 }

@@ -16,21 +16,17 @@ public class ClientDao implements IDao{
         DefaultDao.insertEntity(entity);
     }
 
-
     public void updateEntity(final Object id, final IEntity entity) {
         DefaultDao.updateEntity((Integer) id, ClientEntity.class.getCanonicalName(), entity);
     }
-
 
     public void removeEntity(final Object id) {
         DefaultDao.removeEntity((Integer) id, ClientEntity.class.getCanonicalName());
     }
 
-
     public IEntity getEntity(final Object id) {
         return DefaultDao.getEntity((Integer) id, ClientEntity.class.getCanonicalName());
     }
-
 
     public List<IEntity> getEntities() {
         return DefaultDao.getEntities(ClientEntity.class.getCanonicalName());

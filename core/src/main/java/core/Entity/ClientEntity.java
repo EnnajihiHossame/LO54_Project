@@ -17,8 +17,21 @@ public class ClientEntity implements Serializable, IEntity {
     private String email;
     private int idCourseSession;
 
+    public ClientEntity() {
+    }
+
+    public ClientEntity(String lastname, String firstname, String address, String phone, String email, int idCourseSession) {
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.idCourseSession = idCourseSession;
+    }
+
     @Id
     @Column(name = "ID_CLIENT", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getIdClient() {
         return idClient;
     }
