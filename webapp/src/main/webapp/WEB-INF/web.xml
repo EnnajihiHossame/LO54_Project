@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>Landing</servlet-name>
+        <servlet-class>com.utbm.lo54.LandingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Landing</servlet-name>
+        <url-pattern></url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>inscriptionForm</servlet-name>
+        <servlet-class>com.utbm.lo54.SubscriptionFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>inscriptionForm</servlet-name>
+        <url-pattern>/inscriptionForm</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>inscription</servlet-name>
+        <servlet-class>com.utbm.lo54.SubscriptionCommitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>inscription</servlet-name>
+        <url-pattern>/inscription</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
+
