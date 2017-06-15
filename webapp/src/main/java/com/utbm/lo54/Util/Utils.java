@@ -35,4 +35,6 @@ public class Utils {
     public static final String DAY = "day";
 
     public static final String CONTENT_TYPE = "text/html;charset=UTF-8";
+    public static final String CURRENT_FILTER_TYPE = "current_filter_type";
+    public static final String CURRENT_FILTER_VALUE = "current_filter_value";
 }

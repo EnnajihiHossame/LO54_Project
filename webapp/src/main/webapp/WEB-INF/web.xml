@@ -28,6 +28,38 @@
         <servlet-name>inscription</servlet-name>
         <url-pattern>/inscription</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>landingFilter</servlet-name>
+        <servlet-class>com.utbm.lo54.LandingFilterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>landingFilter</servlet-name>
+        <url-pattern>/landingfilter</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>landingFilterByLocation</servlet-name>
+        <servlet-class>com.utbm.lo54.LandingFilterByLocation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>landingFilterByLocation</servlet-name>
+        <url-pattern>/landing_filter_by_location</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>landingFilterByTitle</servlet-name>
+        <servlet-class>com.utbm.lo54.LandingFilterByTitle</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>landingFilterByTitle</servlet-name>
+        <url-pattern>/landing_filter_by_title</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>landingFilterByDate</servlet-name>
+        <servlet-class>com.utbm.lo54.LandingFilterByDate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>landingFilterByDate</servlet-name>
+        <url-pattern>/landing_filter_by_date</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
