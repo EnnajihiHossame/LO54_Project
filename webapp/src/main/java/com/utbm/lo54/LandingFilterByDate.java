@@ -25,6 +25,7 @@ public class LandingFilterByDate extends HttpServlet {
 
         String date = request.getParameter("filter_date");
         System.out.println(date);
+        // Split string(date) into String[] splitedDate
         String splitedDate [] = date.split("-");
         System.out.println(splitedDate[0]);
         System.out.println(splitedDate[1]);
@@ -58,7 +59,7 @@ public class LandingFilterByDate extends HttpServlet {
 
         request.setAttribute(Utils.CURRENT_FILTER_TYPE, "date");
         request.setAttribute(Utils.CURRENT_FILTER_VALUE, date);
-        request.getRequestDispatcher(Utils.PATH_FILTER_DEFAULT).forward(request, response);
+        request.getRequestDispatcher(Utils.PATH_LANDING).forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

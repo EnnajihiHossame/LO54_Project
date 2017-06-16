@@ -40,7 +40,7 @@ public class LandingServlet extends HttpServlet {
         request.setAttribute(Utils.ATTRIBUTE_LIST_LOCATION, listLocation);
 
 
-        request.getRequestDispatcher(Utils.PATH_FILTER_DEFAULT).forward(request, response);
+        request.getRequestDispatcher(Utils.PATH_LANDING).forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

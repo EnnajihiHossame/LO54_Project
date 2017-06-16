@@ -38,7 +38,7 @@ public class LandingFilterByTitle extends HttpServlet {
 
         request.setAttribute(Utils.CURRENT_FILTER_TYPE, "Titre");
         request.setAttribute(Utils.CURRENT_FILTER_VALUE, course_title);
-        request.getRequestDispatcher(Utils.PATH_FILTER_DEFAULT).forward(request, response);
+        request.getRequestDispatcher(Utils.PATH_LANDING).forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

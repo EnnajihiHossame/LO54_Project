@@ -46,7 +46,7 @@ public class CourseSessionDao implements IDao {
         List<IEntity> listEntities = null;
 
         try {
-            Query query = session.createQuery("from " + CourseSessionEntity.class.getCanonicalName() + " c where c.startDate < :timeStampMax and c.startDate > :timeStampMin");
+            Query query = session.createQuery("from CourseSessionEntity c where c.startDate < :timeStampMax and c.startDate > :timeStampMin");
             query.setParameter("timeStampMin", tmin);
             query.setParameter("timeStampMax", tmax);
             listEntities = query.list();

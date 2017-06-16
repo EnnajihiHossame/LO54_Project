@@ -41,7 +41,7 @@ public class LandingFilterByLocation extends HttpServlet {
 
         request.setAttribute(Utils.CURRENT_FILTER_TYPE, "Lieu");
         request.setAttribute(Utils.CURRENT_FILTER_VALUE, city);
-        request.getRequestDispatcher(Utils.PATH_FILTER_DEFAULT).forward(request, response);
+        request.getRequestDispatcher(Utils.PATH_LANDING).forward(request, response);
 
     }
 

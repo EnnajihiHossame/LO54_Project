@@ -21,7 +21,7 @@ public class SubscriptionFormServlet extends HttpServlet {
 
 
         CourseSessionDao courseSessionDao = new CourseSessionDao();
-        CourseSessionEntity courseSession = (CourseSessionEntity) courseSessionDao.getEntity(Integer.parseInt(request.getParameter(Utils.FILTER_ID_COURSE_SESSION)));
+        CourseSessionEntity courseSession = (CourseSessionEntity) courseSessionDao.getEntity(Integer.parseInt(request.getParameter(Utils.SELECTED_ID_COURSE_SESSION)));
 
         request.setAttribute(Utils.ATTRIBUTE_COURSE_SESSION, courseSession);
 

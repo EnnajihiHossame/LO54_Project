@@ -4,7 +4,7 @@
   User: ennajihihoussame
   Date: 12/06/2017
   Time: 17:51
-  To change this template use File | Settings | File Templates.
+
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
@@ -29,7 +29,7 @@
                 out.print(" au " + courseSession.getEndDate());
             %></div>
             <div class="panel-body">
-                <form method="POST" action="inscription?<%out.print(Utils.FILTER_ID_COURSE_SESSION); %>=<%out.print(courseSession.getIdCourseSession());%>">
+                <form method="POST" action="inscription?<%out.print(Utils.SELECTED_ID_COURSE_SESSION); %>=<%out.print(courseSession.getIdCourseSession());%>">
                     <div class="form-group">
                         <label for="lastname">Nom</label>
                         <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Nom">
