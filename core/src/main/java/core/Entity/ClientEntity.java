@@ -1,13 +1,10 @@
 package core.Entity;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by ennajihihoussame on 28/05/2017.
+ * Created by ennajihihoussame on 16/06/2017.
  */
-@Entity
-@Table(name = "CLIENT", schema = "LO54_database", catalog = "")
 public class ClientEntity implements Serializable, IEntity {
     private int idClient;
     private String lastname;
@@ -15,23 +12,20 @@ public class ClientEntity implements Serializable, IEntity {
     private String address;
     private String phone;
     private String email;
-    private int idCourseSession;
+    private CourseSessionEntity courseSession;
 
-    public ClientEntity() {
-    }
+    public ClientEntity(){}
 
-    public ClientEntity(String lastname, String firstname, String address, String phone, String email, int idCourseSession) {
-        this.lastname = lastname;
-        this.firstname = firstname;
+    public ClientEntity(final String lastName, final String firstName, final String address, final String phone, final String email, final CourseSessionEntity courseSession) {
+        this.lastname = lastName;
+        this.firstname = firstName;
         this.address = address;
         this.phone = phone;
         this.email = email;
-        this.idCourseSession = idCourseSession;
+        this.courseSession = courseSession;
     }
 
-    @Id
-    @Column(name = "ID_CLIENT", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     public int getIdClient() {
         return idClient;
     }
@@ -40,8 +34,6 @@ public class ClientEntity implements Serializable, IEntity {
         this.idClient = idClient;
     }
 
-    @Basic
-    @Column(name = "LASTNAME", nullable = false, length = 45)
     public String getLastname() {
         return lastname;
     }
@@ -50,8 +42,6 @@ public class ClientEntity implements Serializable, IEntity {
         this.lastname = lastname;
     }
 
-    @Basic
-    @Column(name = "FIRSTNAME", nullable = false, length = 45)
     public String getFirstname() {
         return firstname;
     }
@@ -60,8 +50,6 @@ public class ClientEntity implements Serializable, IEntity {
         this.firstname = firstname;
     }
 
-    @Basic
-    @Column(name = "ADDRESS", nullable = false, length = 45)
     public String getAddress() {
         return address;
     }
@@ -70,8 +58,6 @@ public class ClientEntity implements Serializable, IEntity {
         this.address = address;
     }
 
-    @Basic
-    @Column(name = "PHONE", nullable = false, length = 45)
     public String getPhone() {
         return phone;
     }
@@ -80,14 +66,20 @@ public class ClientEntity implements Serializable, IEntity {
         this.phone = phone;
     }
 
-    @Basic
-    @Column(name = "EMAIL", nullable = false, length = 45)
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public CourseSessionEntity getCourseSession() {
+        return courseSession;
+    }
+
+    public void setCourseSession(CourseSessionEntity courseSession) {
+        this.courseSession = courseSession;
     }
 
     @Override
@@ -118,15 +110,6 @@ public class ClientEntity implements Serializable, IEntity {
         return result;
     }
 
-    @Basic
-    @Column(name = "ID_COURSE_SESSION", nullable = false)
-    public int getIdCourseSession() {
-        return idCourseSession;
-    }
-
-    public void setIdCourseSession(int idCourseSession) {
-        this.idCourseSession = idCourseSession;
-    }
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -137,7 +120,7 @@ public class ClientEntity implements Serializable, IEntity {
         builder.append(", address=").append(address);
         builder.append(", phone=").append(phone);
         builder.append(", email=").append(email);
-        builder.append(", courseSession=").append(idCourseSession);
+        builder.append(", courseSession=").append(courseSession.toString());
         builder.append("}");
         return builder.toString();
     }

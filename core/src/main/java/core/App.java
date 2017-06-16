@@ -3,6 +3,7 @@ package core;
 import core.DAO.ClientDao;
 import core.DAO.CourseDao;
 import core.DAO.CourseSessionDao;
+import core.DAO.LocationDao;
 import core.Entity.ClientEntity;
 import core.Entity.CourseEntity;
 import core.Entity.CourseSessionEntity;
@@ -21,7 +22,9 @@ public class App
     {
         System.out.println( "Hello World!" );
         CourseSessionDao courseSessionDao = new CourseSessionDao();
-        List<String[]> coursesession_list = courseSessionDao.getEntitiesTest();
+        List<IEntity> coursesession_list = courseSessionDao.getEntitiesByLocationId(2);
         System.out.println(coursesession_list.toString());
+
+
     }
 }

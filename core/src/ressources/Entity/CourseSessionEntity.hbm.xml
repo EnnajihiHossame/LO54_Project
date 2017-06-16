@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="core.Entity.CourseSessionEntity" table="COURSE_SESSION" schema="LO54_database">
+        <id name="idCourseSession">
+            <column name="ID_COURSE_SESSION" sql-type="int(11)"/>
+        </id>
+        <property name="startDate">
+            <column name="START_DATE" sql-type="timestamp"/>
+        </property>
+        <property name="endDate">
+            <column name="END_DATE" sql-type="timestamp"/>
+        </property>
+        <many-to-one name="course" column="CODE_COURSE"/>
+        <many-to-one name="location" column="ID_LOCATION"/>
+    </class>
+</hibernate-mapping>

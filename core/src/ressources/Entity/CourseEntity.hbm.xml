@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="core.Entity.CourseEntity" table="COURSE" schema="LO54_database">
+        <id name="codeCourse">
+            <column name="CODE_COURSE" sql-type="varchar(45)" length="45"/>
+        </id>
+        <property name="title">
+            <column name="TITLE" sql-type="varchar(45)" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>

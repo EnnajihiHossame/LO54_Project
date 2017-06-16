@@ -29,14 +29,6 @@
         <url-pattern>/inscription</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>landingFilter</servlet-name>
-        <servlet-class>com.utbm.lo54.LandingFilterServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>landingFilter</servlet-name>
-        <url-pattern>/landingfilter</url-pattern>
-    </servlet-mapping>
-    <servlet>
         <servlet-name>landingFilterByLocation</servlet-name>
         <servlet-class>com.utbm.lo54.LandingFilterByLocation</servlet-class>
     </servlet>

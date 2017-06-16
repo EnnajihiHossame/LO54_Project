@@ -101,10 +101,10 @@
                 for (IEntity entity : listCoursesSession) {
                     CourseSessionEntity courseSession = (CourseSessionEntity) entity;
                     out.println("<tr>");
-                    out.println("<td>" + courseSession.getCodeCourse() + "</td>");
+                    out.println("<td>" + courseSession.getCourse().getTitle() + "</td>");
                     out.println("<td>" + courseSession.getStartDate() + "</td>");
                     out.println("<td>" + courseSession.getEndDate() + "</td>");
-                    out.println("<td>" + courseSession.getIdLocation() + "</td>");
+                    out.println("<td>" + courseSession.getLocation().getCity() + "</td>");
                     out.println("<td><a class=\"btn btn-primary\" href=\"inscriptionForm?" + Utils.FILTER_ID_COURSE_SESSION + "=" + courseSession.getIdCourseSession() + "\"> S'inscrire </a></td>");
                     out.println("</tr>");
                 }

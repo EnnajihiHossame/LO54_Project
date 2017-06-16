@@ -23,8 +23,8 @@
         <div class="panel panel-default">
             <div class="panel-heading">Inscription à la session
                 <%
-                out.print(courseSession.getCodeCourse());
-                out.print(" à" + courseSession.getIdLocation());
+                out.print(courseSession.getCourse().getTitle());
+                out.print(" à" + courseSession.getLocation().getCity());
                 out.print(" du " + courseSession.getStartDate());
                 out.print(" au " + courseSession.getEndDate());
             %></div>
