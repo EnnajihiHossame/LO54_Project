@@ -23,6 +23,7 @@
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="17" parent="10" name="LASTNAME">
       <Position>2</Position>
